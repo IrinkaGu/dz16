@@ -1,5 +1,14 @@
-<div class="list-group">
+<md-list>
 
-    <pokemon-list-item pokemon="singlePokemon" ng-repeat="singlePokemon in $ctrl.pokemons"></pokemon-list-item>
+	<md-list-item class="md-2-line" ng-repeat="item in $ctrl.pokemons">
+		<div class="md-list-item-text">
+			<a href="#!/pokemons/{{item.objectId }}" class="list-group-item">
 
-</div>
+				<span>
+					{{item.name | uppercase }}
+				</span>
+
+			</a>
+		</div>
+	</md-list-item>
+</md-list>
